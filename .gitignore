@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# source video (served from public/bg-video.mp4)
+276550_medium.mp4
