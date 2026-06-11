@@ -44,7 +44,7 @@ export default function Footer() {
     <footer className="relative pt-16 pb-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#030d18]" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0EA5E9]/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2563EB]/40 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* CTA banner */}
@@ -71,7 +71,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://wa.me/1234567890?text=Hello%20CheapAirlineTickets.us%2C%20I%20would%20like%20a%20flight%20quote."
+                href="https://wa.me/1234567890?text=Hello%20FlightBooking.bitsolmarketing.com%2C%20I%20would%20like%20a%20flight%20quote."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-bold btn-whatsapp"
@@ -98,12 +98,12 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#7C3AED] flex items-center justify-center">
                 <Plane className="w-5 h-5 text-white rotate-45" />
               </div>
               <div>
                 <div className="text-white font-bold text-lg">
-                  CheapAirline<span className="gradient-text">Tickets</span><span className="text-[#22D3EE]/70">.us</span>
+                  Flight<span className="gradient-text">Booking</span><span className="text-[#00D9FF]/70">.bitsolmarketing.com</span>
                 </div>
               </div>
             </div>
@@ -113,17 +113,17 @@ export default function Footer() {
 
             {/* Contact */}
             <div className="space-y-3">
-              <a href="tel:+18005551234" className="flex items-center gap-3 text-white/60 hover:text-[#22D3EE] transition-colors text-sm group">
-                <div className="w-8 h-8 rounded-lg glass flex items-center justify-center group-hover:bg-[#0EA5E9]/20 transition-colors">
+              <a href="tel:+18005551234" className="flex items-center gap-3 text-white/60 hover:text-[#00D9FF] transition-colors text-sm group">
+                <div className="w-8 h-8 rounded-lg glass flex items-center justify-center group-hover:bg-[#2563EB]/20 transition-colors">
                   <Phone className="w-4 h-4" />
                 </div>
                 1-800-555-1234
               </a>
-              <a href="mailto:support@cheapairlinetickets.us" className="flex items-center gap-3 text-white/60 hover:text-[#22D3EE] transition-colors text-sm group">
-                <div className="w-8 h-8 rounded-lg glass flex items-center justify-center group-hover:bg-[#0EA5E9]/20 transition-colors">
+              <a href="mailto:support@flightbooking.bitsolmarketing.com" className="flex items-center gap-3 text-white/60 hover:text-[#00D9FF] transition-colors text-sm group">
+                <div className="w-8 h-8 rounded-lg glass flex items-center justify-center group-hover:bg-[#2563EB]/20 transition-colors">
                   <Mail className="w-4 h-4" />
                 </div>
-                support@cheapairlinetickets.us
+                support@flightbooking.bitsolmarketing.com
               </a>
               <div className="flex items-center gap-3 text-white/60 text-sm">
                 <div className="w-8 h-8 rounded-lg glass flex items-center justify-center">
@@ -140,7 +140,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {popularRoutes.map(route => (
                 <li key={route}>
-                  <a href="#search" className="text-white/50 hover:text-[#22D3EE] transition-colors text-sm flex items-center gap-1 group">
+                  <a href="#search" className="text-white/50 hover:text-[#00D9FF] transition-colors text-sm flex items-center gap-1 group">
                     <span className="group-hover:translate-x-1 transition-transform">{route}</span>
                   </a>
                 </li>
@@ -154,7 +154,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {flightDeals.map(deal => (
                 <li key={deal}>
-                  <a href="#search" className="text-white/50 hover:text-[#22D3EE] transition-colors text-sm flex items-center gap-1 group">
+                  <a href="#search" className="text-white/50 hover:text-[#00D9FF] transition-colors text-sm flex items-center gap-1 group">
                     <span className="group-hover:translate-x-1 transition-transform">{deal}</span>
                   </a>
                 </li>
@@ -168,7 +168,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {travelInfo.map(info => (
                 <li key={info}>
-                  <a href="#" className="text-white/50 hover:text-[#22D3EE] transition-colors text-sm flex items-center gap-1 group">
+                  <a href="#" className="text-white/50 hover:text-[#00D9FF] transition-colors text-sm flex items-center gap-1 group">
                     <span className="group-hover:translate-x-1 transition-transform">{info}</span>
                   </a>
                 </li>
@@ -180,7 +180,7 @@ export default function Footer() {
         {/* SEO text block */}
         <div className="glass rounded-xl p-5 mb-10 text-center">
           <p className="text-white/30 text-xs leading-relaxed max-w-4xl mx-auto">
-            <strong className="text-white/50">CheapAirlineTickets.us</strong> — Find cheap airline tickets, discount flights, and affordable airfare to destinations worldwide.
+            <strong className="text-white/50">FlightBooking.bitsolmarketing.com</strong> — Find cheap airline tickets, discount flights, and affordable airfare to destinations worldwide.
             Compare USA flight tickets, international flights, domestic flights, and last-minute deals. Our travel experts help you secure the lowest fares on all major airlines including
             American Airlines, Delta, United, Southwest, JetBlue, Emirates, Qatar Airways, British Airways, Lufthansa, and more.
             Search flights from New York, Los Angeles, Chicago, Miami, Dallas, Las Vegas, Orlando, and San Francisco to any destination globally.
@@ -190,7 +190,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-white/30 text-xs text-center md:text-left">
-            © {currentYear} CheapAirlineTickets.us — All rights reserved.
+            © {currentYear} FlightBooking.bitsolmarketing.com — All rights reserved.
             Prices shown are estimated fares and subject to availability.
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4">

@@ -17,14 +17,14 @@ export default function ScrollProgressBar() {
       aria-hidden="true"
     >
       {/* Glowing progress line */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0EA5E9] via-[#22D3EE] to-[#38BDF8]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2563EB] via-[#00D9FF] to-[#7C3AED]" />
       <div
         className="absolute inset-0 blur-sm"
-        style={{ background: "linear-gradient(90deg, #0EA5E9, #22D3EE, #38BDF8)" }}
+        style={{ background: "linear-gradient(90deg, #2563EB, #00D9FF, #7C3AED)" }}
       />
       {/* Leading dot */}
       <motion.div
-        className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#22D3EE]"
+        className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[#00D9FF]"
         style={{ boxShadow: "0 0 10px 3px rgba(34,211,238,0.8)" }}
       />
     </motion.div>

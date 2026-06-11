@@ -9,7 +9,7 @@ export default function WhatsAppButton() {
   const [expanded, setExpanded] = useState(false);
 
   const msg = encodeURIComponent(
-    "Hello CheapAirlineTickets.us,\n\nI would like a quote for the following flight:\n\nFrom: \nTo: \nTravel Date: \nPassengers: \n\nPlease assist."
+    "Hello FlightBooking.bitsolmarketing.com,\n\nI would like a quote for the following flight:\n\nFrom: \nTo: \nTravel Date: \nPassengers: \n\nPlease assist."
   );
 
   return (
@@ -40,7 +40,7 @@ export default function WhatsAppButton() {
                 <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#34D399] border-2 border-[#128C7E]" />
               </div>
               <div className="flex-1">
-                <div className="text-white font-bold text-sm">CheapAirlineTickets.us</div>
+                <div className="text-white font-bold text-sm">FlightBooking.bitsolmarketing.com</div>
                 <div className="text-white/70 text-xs">Travel Consultant</div>
               </div>
               <button onClick={() => setExpanded(false)} className="text-white/60 hover:text-white">

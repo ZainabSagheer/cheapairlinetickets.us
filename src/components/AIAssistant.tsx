@@ -88,13 +88,13 @@ export default function AIAssistant() {
     <section className="py-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 grid-overlay opacity-20" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#0EA5E9]/5 blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#2563EB]/5 blur-[120px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Content */}
           <ScrollReveal direction="left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[#0EA5E9]/30 text-[#22D3EE] text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[#2563EB]/30 text-[#00D9FF] text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
               AI Travel Assistant
             </div>
@@ -110,7 +110,7 @@ export default function AIAssistant() {
 
             <div className="space-y-4 mb-8">
               {[
-                { icon: Plane, label: "Intelligent Flight Recommendations", color: "#0EA5E9" },
+                { icon: Plane, label: "Intelligent Flight Recommendations", color: "#2563EB" },
                 { icon: TrendingDown, label: "Real-time Fare Guidance & Alerts", color: "#34D399" },
                 { icon: MapPin, label: "Personalized Destination Suggestions", color: "#FBBF24" },
                 { icon: Bot, label: "24/7 Instant Response", color: "#A78BFA" },
@@ -140,16 +140,16 @@ export default function AIAssistant() {
             className="relative"
           >
             {/* Glow */}
-            <div className="absolute inset-0 rounded-3xl bg-[#0EA5E9]/10 blur-3xl" />
+            <div className="absolute inset-0 rounded-3xl bg-[#2563EB]/10 blur-3xl" />
 
-            <div className="relative glass-dark rounded-3xl border border-[#0EA5E9]/20 overflow-hidden shadow-2xl">
+            <div className="relative glass-dark rounded-3xl border border-[#2563EB]/20 overflow-hidden shadow-2xl">
               {/* Chat header */}
-              <div className="flex items-center gap-3 px-5 py-4 border-b border-[#0EA5E9]/10">
+              <div className="flex items-center gap-3 px-5 py-4 border-b border-[#2563EB]/10">
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center">
                     <Bot className="w-5 h-5 text-white" />
                   </div>
-                  <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#34D399] border-2 border-[#0a2340]" />
+                  <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#34D399] border-2 border-[#0F172A]" />
                 </div>
                 <div>
                   <div className="text-white font-bold text-sm">TravelAI</div>
@@ -168,7 +168,7 @@ export default function AIAssistant() {
               {/* Static preview messages */}
               <div className="p-5 space-y-4 h-80 overflow-hidden">
                 <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center shrink-0">
                     <Bot className="w-4 h-4 text-white" />
                   </div>
                   <div className="flex-1">
@@ -179,13 +179,13 @@ export default function AIAssistant() {
                 </div>
 
                 <div className="flex gap-3 justify-end">
-                  <div className="max-w-xs bg-[#0EA5E9]/20 border border-[#0EA5E9]/30 rounded-2xl rounded-tr-sm p-3 text-sm text-white">
+                  <div className="max-w-xs bg-[#2563EB]/20 border border-[#2563EB]/30 rounded-2xl rounded-tr-sm p-3 text-sm text-white">
                     Looking for cheap flights from NYC to London
                   </div>
                 </div>
 
                 <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center shrink-0">
                     <Bot className="w-4 h-4 text-white" />
                   </div>
                   <div className="flex-1">
@@ -194,7 +194,7 @@ export default function AIAssistant() {
                     </div>
                     <div className="flex gap-2 mt-2 flex-wrap">
                       {["Yes, find deals", "See flights", "Business class?"].map(s => (
-                        <button key={s} className="px-3 py-1 rounded-lg text-xs text-[#22D3EE] border border-[#22D3EE]/30 hover:bg-[#22D3EE]/10 transition-colors">
+                        <button key={s} className="px-3 py-1 rounded-lg text-xs text-[#00D9FF] border border-[#00D9FF]/30 hover:bg-[#00D9FF]/10 transition-colors">
                           {s}
                         </button>
                       ))}
@@ -204,12 +204,12 @@ export default function AIAssistant() {
 
                 {/* Typing indicator overlay */}
                 <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center shrink-0">
                     <Bot className="w-4 h-4 text-white" />
                   </div>
                   <div className="glass rounded-2xl rounded-tl-sm px-4 py-3 flex gap-1.5 items-center">
                     {[0, 0.2, 0.4].map((delay) => (
-                      <motion.div key={delay} className="w-2 h-2 rounded-full bg-[#0EA5E9]"
+                      <motion.div key={delay} className="w-2 h-2 rounded-full bg-[#2563EB]"
                         animate={{ y: [0, -6, 0] }}
                         transition={{ duration: 0.8, delay, repeat: Infinity }} />
                     ))}
@@ -218,7 +218,7 @@ export default function AIAssistant() {
               </div>
 
               {/* Input preview */}
-              <div className="p-4 border-t border-[#0EA5E9]/10 flex gap-2">
+              <div className="p-4 border-t border-[#2563EB]/10 flex gap-2">
                 <div className="flex-1 px-4 py-3 rounded-xl glass text-white/30 text-sm">
                   Ask me anything about flights...
                 </div>
@@ -246,18 +246,18 @@ export default function AIAssistant() {
               initial={{ opacity: 0, y: 60, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 60 }}
-              className="relative w-full max-w-lg glass-dark rounded-3xl border border-[#0EA5E9]/20 shadow-2xl overflow-hidden"
+              className="relative w-full max-w-lg glass-dark rounded-3xl border border-[#2563EB]/20 shadow-2xl overflow-hidden"
               style={{ height: "80vh", maxHeight: 640 }}
             >
-              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0EA5E9] to-transparent" />
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2563EB] to-transparent" />
 
               {/* Header */}
-              <div className="flex items-center gap-3 px-5 py-4 border-b border-[#0EA5E9]/10">
+              <div className="flex items-center gap-3 px-5 py-4 border-b border-[#2563EB]/10">
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center">
                     <Bot className="w-5 h-5 text-white" />
                   </div>
-                  <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#34D399] border-2 border-[#0a2340]" />
+                  <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[#34D399] border-2 border-[#0F172A]" />
                 </div>
                 <div>
                   <div className="text-white font-bold">TravelAI</div>
@@ -275,14 +275,14 @@ export default function AIAssistant() {
                 {messages.map((msg) => (
                   <div key={msg.id} className={`flex gap-3 ${msg.role === "user" ? "justify-end" : ""}`}>
                     {msg.role === "assistant" && (
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center shrink-0 mt-1">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center shrink-0 mt-1">
                         <Bot className="w-4 h-4 text-white" />
                       </div>
                     )}
                     <div className="max-w-[80%]">
                       <div className={`rounded-2xl p-3 text-sm leading-relaxed whitespace-pre-line ${
                         msg.role === "user"
-                          ? "bg-[#0EA5E9]/20 border border-[#0EA5E9]/30 text-white rounded-tr-sm"
+                          ? "bg-[#2563EB]/20 border border-[#2563EB]/30 text-white rounded-tr-sm"
                           : "glass text-white/80 rounded-tl-sm"
                       }`}>
                         {msg.content}
@@ -291,7 +291,7 @@ export default function AIAssistant() {
                         <div className="flex flex-wrap gap-2 mt-2">
                           {msg.suggestions.map((s) => (
                             <button key={s} onClick={() => sendMessage(s)}
-                              className="px-3 py-1.5 rounded-lg text-xs text-[#22D3EE] border border-[#22D3EE]/30 hover:bg-[#22D3EE]/10 transition-colors">
+                              className="px-3 py-1.5 rounded-lg text-xs text-[#00D9FF] border border-[#00D9FF]/30 hover:bg-[#00D9FF]/10 transition-colors">
                               {s}
                             </button>
                           ))}
@@ -303,12 +303,12 @@ export default function AIAssistant() {
 
                 {isTyping && (
                   <div className="flex gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#2563EB] to-[#00D9FF] flex items-center justify-center shrink-0">
                       <Bot className="w-4 h-4 text-white" />
                     </div>
                     <div className="glass rounded-2xl rounded-tl-sm px-4 py-3 flex gap-1.5 items-center">
                       {[0, 0.2, 0.4].map((delay) => (
-                        <motion.div key={delay} className="w-2 h-2 rounded-full bg-[#0EA5E9]"
+                        <motion.div key={delay} className="w-2 h-2 rounded-full bg-[#2563EB]"
                           animate={{ y: [0, -6, 0] }}
                           transition={{ duration: 0.8, delay, repeat: Infinity }} />
                       ))}
@@ -319,7 +319,7 @@ export default function AIAssistant() {
               </div>
 
               {/* Input */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-[#0EA5E9]/10 bg-[#0a2340]/80 backdrop-blur">
+              <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-[#2563EB]/10 bg-[#0F172A]/80 backdrop-blur">
                 <form onSubmit={(e) => { e.preventDefault(); sendMessage(input); }} className="flex gap-2">
                   <input
                     value={input}

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plane, Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { GlassEffect } from "./LiquidGlass";
+import { ThemeToggle } from "./ThemeToggle";
 
 const WA_ICON = (
   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -55,15 +56,15 @@ export default function Navbar() {
 
               {/* Logo */}
               <Link href="/" className="flex items-center gap-3 group">
-                <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] flex items-center justify-center glow-blue group-hover:scale-110 transition-transform duration-300">
+                <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#7C3AED] flex items-center justify-center glow-blue group-hover:scale-110 transition-transform duration-300">
                   <Plane className="w-5 h-5 text-white rotate-45" />
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#22D3EE] opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300" />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#7C3AED] opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300" />
                 </div>
                 <div>
                   <div className="text-white font-bold text-lg leading-tight">
-                    CheapAirline<span className="gradient-text">Tickets</span>
+                    Flight<span className="gradient-text">Booking</span>
                   </div>
-                  <div className="text-[10px] text-[#22D3EE]/70 tracking-widest uppercase font-medium">.us</div>
+                  <div className="text-[10px] text-[#00D9FF]/70 tracking-widest uppercase font-medium">.bitsolmarketing.com</div>
                 </div>
               </Link>
 
@@ -73,19 +74,20 @@ export default function Navbar() {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-white/70 hover:text-[#22D3EE] text-sm font-medium transition-colors duration-200 relative group"
+                    className="text-white/70 hover:text-[#00D9FF] text-sm font-medium transition-colors duration-200 relative group"
                   >
                     {link.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#0EA5E9] to-[#22D3EE] group-hover:w-full transition-all duration-300 rounded-full" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#2563EB] to-[#7C3AED] group-hover:w-full transition-all duration-300 rounded-full" />
                   </a>
                 ))}
               </div>
 
               {/* Right actions */}
               <div className="hidden md:flex items-center gap-3">
+                <ThemeToggle />
                 {/* WhatsApp — glass green button */}
                 <GlassEffect
-                  href="https://wa.me/1234567890?text=Hello%20CheapAirlineTickets.us%2C%20I%20would%20like%20to%20inquire%20about%20a%20flight."
+                  href="https://wa.me/1234567890?text=Hello%20FlightBooking.bitsolmarketing.com%2C%20I%20would%20like%20to%20inquire%20about%20a%20flight."
                   variant="dark"
                   blurStrength={12}
                   className="rounded-xl px-4 py-2 hover:scale-105"
@@ -103,10 +105,15 @@ export default function Navbar() {
                   blurStrength={12}
                   className="rounded-xl px-4 py-2 hover:scale-105"
                 >
-                  <span className="flex items-center gap-2 text-[#22D3EE] text-sm font-semibold">
+                  <span className="flex items-center gap-2 text-[#00D9FF] text-sm font-semibold">
                     <Phone className="w-4 h-4" /> Call Now
                   </span>
                 </GlassEffect>
+              </div>
+
+              {/* Theme toggle — mobile only (desktop toggle is inside right-actions) */}
+              <div className="md:hidden">
+                <ThemeToggle />
               </div>
 
               {/* Mobile menu toggle */}
@@ -139,7 +146,7 @@ export default function Navbar() {
                     <a
                       key={link.label}
                       href={link.href}
-                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-[#0EA5E9]/10 rounded-xl transition-all duration-200"
+                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-[#2563EB]/10 rounded-xl transition-all duration-200"
                       onClick={() => setMenuOpen(false)}
                     >
                       {link.label}
@@ -156,7 +163,7 @@ export default function Navbar() {
                     </a>
                     <a
                       href="tel:+18005551234"
-                      className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-[#0EA5E9] border border-[#0EA5E9]/30"
+                      className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-sm font-semibold text-[#2563EB] border border-[#2563EB]/30"
                     >
                       <Phone className="w-4 h-4" /> Call Now
                     </a>

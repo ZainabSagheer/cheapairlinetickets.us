@@ -27,21 +27,16 @@ export default function VideoBackground() {
           loop
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "brightness(0.38) saturate(1.25)" }}
+          className="vid-element absolute inset-0 w-full h-full object-cover"
         >
           <source src="/bg-video.mp4" type="video/mp4" />
         </video>
       </motion.div>
 
-      {/* Scroll-reactive dark overlay */}
+      {/* Scroll-reactive overlay — colour switches via CSS var (light/dark) */}
       <motion.div
-        className="absolute inset-0"
-        style={{
-          opacity: overlayOpacity,
-          background:
-            "linear-gradient(160deg, rgba(7,27,46,1) 0%, rgba(5,15,26,0.9) 40%, rgba(7,27,46,1) 100%)",
-        }}
+        className="vid-overlay absolute inset-0"
+        style={{ opacity: overlayOpacity }}
       />
 
       {/* Static blue radial glow */}

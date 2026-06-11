@@ -1,6 +1,6 @@
-// WordPress REST API client for cheapairlinetickets.us (headless CMS)
+// WordPress REST API client for flightbooking.bitsolmarketing.com (headless CMS)
 
-const WP_URL = (process.env.NEXT_PUBLIC_WP_URL ?? "https://cheapairlinetickets.us").replace(/\/$/, "");
+const WP_URL = (process.env.NEXT_PUBLIC_WP_URL ?? "https://flightbooking.bitsolmarketing.com").replace(/\/$/, "");
 const API    = `${WP_URL}/wp-json/wp/v2`;
 
 function stripTags(html: string): string {
@@ -70,14 +70,14 @@ export interface WPDestination {
 }
 
 export const FALLBACK_DESTINATIONS: WPDestination[] = [
-  { city: "New York",      code: "JFK", country: "USA", from: "$149", emoji: "🗽", gradientFrom: "#1a3a5c", gradientTo: "#0a2340", accent: "#0EA5E9", tag: "Most Popular",  bg: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80" },
+  { city: "New York",      code: "JFK", country: "USA", from: "$149", emoji: "🗽", gradientFrom: "#1a2a5c", gradientTo: "#0a0a40", accent: "#2563EB", tag: "Most Popular",  bg: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600&q=80" },
   { city: "Los Angeles",   code: "LAX", country: "USA", from: "$129", emoji: "🌴", gradientFrom: "#2d1a5c", gradientTo: "#1a0a40", accent: "#A78BFA", tag: "Trending",      bg: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&q=80" },
   { city: "Miami",         code: "MIA", country: "USA", from: "$159", emoji: "🏖️", gradientFrom: "#1a5c3a", gradientTo: "#0a3020", accent: "#34D399", tag: "Beach Getaway", bg: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" },
   { city: "Chicago",       code: "ORD", country: "USA", from: "$119", emoji: "🏙️", gradientFrom: "#3a1a1a", gradientTo: "#2a0a0a", accent: "#F87171", tag: "Business Hub",  bg: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" },
   { city: "Las Vegas",     code: "LAS", country: "USA", from: "$99",  emoji: "🎰", gradientFrom: "#3a2a1a", gradientTo: "#2a1a0a", accent: "#FBBF24", tag: "Best Deal",     bg: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&q=80" },
-  { city: "Orlando",       code: "MCO", country: "USA", from: "$139", emoji: "🎢", gradientFrom: "#1a3a3a", gradientTo: "#0a2020", accent: "#22D3EE", tag: "Family Fun",    bg: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=600&q=80" },
+  { city: "Orlando",       code: "MCO", country: "USA", from: "$139", emoji: "🎢", gradientFrom: "#1a1a3a", gradientTo: "#0a0a20", accent: "#00D9FF", tag: "Family Fun",    bg: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?w=600&q=80" },
   { city: "Dallas",        code: "DFW", country: "USA", from: "$109", emoji: "🤠", gradientFrom: "#3a1a3a", gradientTo: "#200a20", accent: "#E879F9", tag: "Value Pick",    bg: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" },
-  { city: "San Francisco", code: "SFO", country: "USA", from: "$189", emoji: "🌉", gradientFrom: "#1a2a3a", gradientTo: "#0a1520", accent: "#38BDF8", tag: "Tech Capital",  bg: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&q=80" },
+  { city: "San Francisco", code: "SFO", country: "USA", from: "$189", emoji: "🌉", gradientFrom: "#1a1a3a", gradientTo: "#0a0a20", accent: "#7C3AED", tag: "Tech Capital",  bg: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&q=80" },
 ];
 
 export async function fetchDestinations(): Promise<WPDestination[]> {
@@ -104,8 +104,8 @@ export async function fetchDestinations(): Promise<WPDestination[]> {
     from:         d.meta?.price_from    ?? "$0",
     emoji:        d.meta?.emoji         ?? "✈️",
     gradientFrom: d.meta?.gradient_from ?? "#1a3a5c",
-    gradientTo:   d.meta?.gradient_to   ?? "#0a2340",
-    accent:       d.meta?.accent_color  ?? "#0EA5E9",
+    gradientTo:   d.meta?.gradient_to   ?? "#0F172A",
+    accent:       d.meta?.accent_color  ?? "#2563EB",
     tag:          d.meta?.tag           ?? "",
     bg:           d._embedded?.["wp:featuredmedia"]?.[0]?.source_url ?? "",
   }));
@@ -126,11 +126,11 @@ export interface WPTestimonial {
 }
 
 export const FALLBACK_TESTIMONIALS: WPTestimonial[] = [
-  { id: 1, name: "Sarah Mitchell",  location: "New York, USA",      rating: 5, review: "CheapAirlineTickets.us saved me over $400 on my roundtrip to London! The WhatsApp support was incredibly fast — my consultant responded within minutes and had my tickets confirmed the same day. Absolutely phenomenal service!", route: "NYC → London",       savings: "$412", avatar: "SM", color: "#0EA5E9" },
-  { id: 2, name: "Marcus Johnson",  location: "Chicago, USA",        rating: 5, review: "I was skeptical at first, but after comparing with three other sites, CheapAirlineTickets.us had the lowest fare by far. The booking consultant walked me through every step. Will definitely use again for our family vacation!",  route: "Chicago → Cancún",  savings: "$287", avatar: "MJ", color: "#22D3EE" },
-  { id: 3, name: "Jennifer Park",   location: "Los Angeles, USA",    rating: 5, review: "Booked business class to Tokyo at a price I couldn't believe. The team negotiated an upgrade I never expected. Professional, efficient, and genuinely cared about getting me the best deal. 10/10 recommend!",                       route: "LAX → Tokyo",        savings: "$650", avatar: "JP", color: "#A78BFA" },
+  { id: 1, name: "Sarah Mitchell",  location: "New York, USA",      rating: 5, review: "FlightBooking.bitsolmarketing.com saved me over $400 on my roundtrip to London! The WhatsApp support was incredibly fast — my consultant responded within minutes and had my tickets confirmed the same day. Absolutely phenomenal service!", route: "NYC → London",       savings: "$412", avatar: "SM", color: "#2563EB" },
+  { id: 2, name: "Marcus Johnson",  location: "Chicago, USA",        rating: 5, review: "I was skeptical at first, but after comparing with three other sites, FlightBooking.bitsolmarketing.com had the lowest fare by far. The booking consultant walked me through every step. Will definitely use again for our family vacation!",  route: "Chicago → Cancún",  savings: "$287", avatar: "MJ", color: "#00D9FF" },
+  { id: 3, name: "Jennifer Park",   location: "Los Angeles, USA",    rating: 5, review: "Booked business class to Tokyo at a price I couldn't believe. The team negotiated an upgrade I never expected. Professional, efficient, and genuinely cared about getting me the best deal. 10/10 recommend!",                       route: "LAX → Tokyo",        savings: "$650", avatar: "JP", color: "#7C3AED" },
   { id: 4, name: "David Thompson",  location: "Miami, USA",          rating: 5, review: "What sets them apart is the personal touch. Instead of a generic booking portal, I had a real expert help me find connecting flights that saved me money and reduced travel time. Pure gold!",                                       route: "Miami → Dubai",      savings: "$320", avatar: "DT", color: "#34D399" },
-  { id: 5, name: "Amanda Rivera",   location: "Dallas, USA",         rating: 5, review: "Used CheapAirlineTickets.us for three trips this year. Each time, the service was seamless and the prices were unbeatable. The WhatsApp chat feature makes it so easy to get quick answers. Highly recommended!",                    route: "Dallas → NYC",       savings: "$195", avatar: "AR", color: "#FBBF24" },
+  { id: 5, name: "Amanda Rivera",   location: "Dallas, USA",         rating: 5, review: "Used FlightBooking.bitsolmarketing.com for three trips this year. Each time, the service was seamless and the prices were unbeatable. The WhatsApp chat feature makes it so easy to get quick answers. Highly recommended!",                    route: "Dallas → NYC",       savings: "$195", avatar: "AR", color: "#FBBF24" },
   { id: 6, name: "Robert Chen",     location: "San Francisco, USA",  rating: 5, review: "Finally a travel agency that doesn't charge hidden fees and actually communicates! Got my entire family of 5 to Orlando for under $600 total. The consultant was patient and found us the perfect flight times.",                     route: "SFO → Orlando",      savings: "$480", avatar: "RC", color: "#F87171" },
 ];
 
@@ -159,7 +159,7 @@ export async function fetchTestimonials(): Promise<WPTestimonial[]> {
     route:    t.meta?.route    ?? "",
     savings:  t.meta?.savings  ?? "",
     avatar:   t.meta?.avatar   ?? stripTags(t.title.rendered).split(" ").map(w => w[0]).join("").toUpperCase(),
-    color:    t.meta?.color    ?? "#0EA5E9",
+    color:    t.meta?.color    ?? "#2563EB",
   }));
 }
 

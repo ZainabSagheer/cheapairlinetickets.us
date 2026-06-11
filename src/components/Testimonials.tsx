@@ -42,13 +42,13 @@ export default function Testimonials({ testimonials = FALLBACK_TESTIMONIALS }: P
     <section className="py-20 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050f1a]/80 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-[#0EA5E9]/3 blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-[#2563EB]/3 blur-[100px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <ScrollReveal direction="up" className="text-center mb-14">
           <GlassEffect variant="dark" blurStrength={16} className="rounded-full px-4 py-2 inline-flex mb-4">
-            <span className="flex items-center gap-2 text-[#22D3EE] text-sm font-medium">
+            <span className="flex items-center gap-2 text-[#00D9FF] text-sm font-medium">
               <Star className="w-4 h-4 fill-[#FBBF24] text-[#FBBF24]" />
               Customer Reviews
             </span>
@@ -58,7 +58,7 @@ export default function Testimonials({ testimonials = FALLBACK_TESTIMONIALS }: P
             <span className="gradient-text">Thousands</span>
           </h2>
           <p className="text-white/50 text-lg max-w-xl mx-auto">
-            Join over 2.8 million happy travelers who've saved big with CheapAirlineTickets.us
+            Join over 2.8 million happy travelers who've saved big with FlightBooking.bitsolmarketing.com
           </p>
 
           {/* Overall rating */}
@@ -140,7 +140,7 @@ export default function Testimonials({ testimonials = FALLBACK_TESTIMONIALS }: P
             <button
               onClick={prev}
               disabled={current === 0}
-              className="w-10 h-10 rounded-full glass border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-[#0EA5E9]/40 disabled:opacity-30 transition-all"
+              className="w-10 h-10 rounded-full glass border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-[#2563EB]/40 disabled:opacity-30 transition-all"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -152,7 +152,7 @@ export default function Testimonials({ testimonials = FALLBACK_TESTIMONIALS }: P
                   key={i}
                   onClick={() => { setAutoPlay(false); setCurrent(i); }}
                   className={`rounded-full transition-all duration-300 ${
-                    i === current ? "w-6 h-2 bg-[#0EA5E9]" : "w-2 h-2 bg-white/20 hover:bg-white/40"
+                    i === current ? "w-6 h-2 bg-[#2563EB]" : "w-2 h-2 bg-white/20 hover:bg-white/40"
                   }`}
                 />
               ))}
@@ -161,7 +161,7 @@ export default function Testimonials({ testimonials = FALLBACK_TESTIMONIALS }: P
             <button
               onClick={next}
               disabled={current >= maxIndex}
-              className="w-10 h-10 rounded-full glass border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-[#0EA5E9]/40 disabled:opacity-30 transition-all"
+              className="w-10 h-10 rounded-full glass border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-[#2563EB]/40 disabled:opacity-30 transition-all"
             >
               <ChevronRight className="w-5 h-5" />
             </button>

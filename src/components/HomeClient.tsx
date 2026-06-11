@@ -105,11 +105,11 @@ export default function HomeClient({ deals, destinations, testimonials }: HomeCl
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="glass-dark rounded-3xl p-10 flex flex-col items-center gap-6 border border-[#0EA5E9]/20 shadow-2xl max-w-sm w-full mx-4"
+              className="glass-dark rounded-3xl p-10 flex flex-col items-center gap-6 border border-[#2563EB]/20 shadow-2xl max-w-sm w-full mx-4"
             >
               <div className="relative w-24 h-24">
-                <div className="absolute inset-0 rounded-full border-2 border-[#0EA5E9]/20 animate-spin" style={{ animationDuration: "2s" }} />
-                <div className="absolute inset-3 rounded-full border-2 border-[#22D3EE]/50 animate-spin" style={{ animationDuration: "1s", animationDirection: "reverse" }} />
+                <div className="absolute inset-0 rounded-full border-2 border-[#2563EB]/20 animate-spin" style={{ animationDuration: "2s" }} />
+                <div className="absolute inset-3 rounded-full border-2 border-[#00D9FF]/50 animate-spin" style={{ animationDuration: "1s", animationDirection: "reverse" }} />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-4xl animate-bounce">✈️</span>
                 </div>
@@ -122,7 +122,7 @@ export default function HomeClient({ deals, destinations, testimonials }: HomeCl
 
               <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
                 <motion.div
-                  className="h-full rounded-full bg-gradient-to-r from-[#0EA5E9] to-[#22D3EE]"
+                  className="h-full rounded-full bg-gradient-to-r from-[#2563EB] to-[#00D9FF]"
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 1.4, ease: "easeInOut" }}
@@ -135,7 +135,7 @@ export default function HomeClient({ deals, destinations, testimonials }: HomeCl
                     key={code}
                     animate={{ opacity: [0.3, 1, 0.3] }}
                     transition={{ duration: 1.2, delay: i * 0.2, repeat: Infinity }}
-                    className="px-3 py-1 rounded-lg glass border border-[#0EA5E9]/20 text-[#0EA5E9] text-xs font-bold"
+                    className="px-3 py-1 rounded-lg glass border border-[#2563EB]/20 text-[#2563EB] text-xs font-bold"
                   >
                     {code}
                   </motion.div>

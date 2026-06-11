@@ -33,12 +33,12 @@ export default function DepartureBoard() {
   }, []);
 
   return (
-    <div className="glass-dark rounded-2xl border border-[#0EA5E9]/20 overflow-hidden">
+    <div className="glass-dark rounded-2xl border border-[#2563EB]/20 overflow-hidden">
       {/* Board header */}
-      <div className="flex items-center gap-3 px-4 py-3 border-b border-[#0EA5E9]/10"
+      <div className="flex items-center gap-3 px-4 py-3 border-b border-[#2563EB]/10"
         style={{ background: "rgba(14,165,233,0.08)" }}>
-        <Plane className="w-4 h-4 text-[#0EA5E9] rotate-45" />
-        <span className="text-[#0EA5E9] font-bold text-sm tracking-wider uppercase">Departures</span>
+        <Plane className="w-4 h-4 text-[#2563EB] rotate-45" />
+        <span className="text-[#2563EB] font-bold text-sm tracking-wider uppercase">Departures</span>
         <div className="ml-auto flex items-center gap-1.5 text-[#34D399] text-xs">
           <div className="w-2 h-2 rounded-full bg-[#34D399] animate-pulse" />
           Live
@@ -59,10 +59,10 @@ export default function DepartureBoard() {
           <div
             key={flight.flight}
             className={`grid grid-cols-5 px-4 py-2.5 text-sm border-b border-white/5 last:border-0 transition-all duration-500 ${
-              i === activeRow ? "bg-[#0EA5E9]/10" : "hover:bg-white/5"
+              i === activeRow ? "bg-[#2563EB]/10" : "hover:bg-white/5"
             }`}
           >
-            <span className={`font-bold text-xs ${i === activeRow ? "text-[#22D3EE]" : "text-white/70"}`}>
+            <span className={`font-bold text-xs ${i === activeRow ? "text-[#00D9FF]" : "text-white/70"}`}>
               {flight.flight}
             </span>
             <span className="col-span-2 text-white/70 text-xs truncate pr-2">{flight.dest}</span>

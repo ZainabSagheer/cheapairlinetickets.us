@@ -65,18 +65,20 @@ const SPRING = "cubic-bezier(0.175, 0.885, 0.32, 2.2)";
 // ─── Variants ─────────────────────────────────────────────────────────────────
 type GlassVariant = "light" | "dark" | "blue" | "cyan";
 
+// Values are defined as CSS custom properties in globals.css and switch
+// automatically when the .dark class is toggled by next-themes.
 const TINT: Record<GlassVariant, string> = {
-  light: "rgba(255,255,255,0.22)",
-  dark:  "rgba(7,27,46,0.55)",
-  blue:  "rgba(14,165,233,0.15)",
-  cyan:  "rgba(34,211,238,0.18)",
+  light: "var(--glass-tint-light)",
+  dark:  "var(--glass-tint-dark)",
+  blue:  "var(--glass-tint-blue)",
+  cyan:  "var(--glass-tint-cyan)",
 };
 
 const HIGHLIGHT: Record<GlassVariant, string> = {
-  light: "inset 2px 2px 1px 0 rgba(255,255,255,0.55), inset -1px -1px 1px 1px rgba(255,255,255,0.45)",
-  dark:  "inset 1px 1px 1px 0 rgba(255,255,255,0.12), inset -1px -1px 1px 0 rgba(14,165,233,0.12)",
-  blue:  "inset 2px 2px 2px 0 rgba(14,165,233,0.35), inset -1px -1px 1px 0 rgba(34,211,238,0.25)",
-  cyan:  "inset 2px 2px 2px 0 rgba(34,211,238,0.45), inset -1px -1px 1px 0 rgba(14,165,233,0.3)",
+  light: "var(--glass-hl-light)",
+  dark:  "var(--glass-hl-dark)",
+  blue:  "var(--glass-hl-blue)",
+  cyan:  "var(--glass-hl-cyan)",
 };
 
 // ─── Core Glass wrapper ───────────────────────────────────────────────────────

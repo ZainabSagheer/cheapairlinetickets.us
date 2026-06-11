@@ -113,7 +113,7 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                   onClick={() => setTripType(type)}
                   className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
                     tripType === type
-                      ? "bg-[#0EA5E9] text-white shadow-lg shadow-[#0EA5E9]/30"
+                      ? "bg-[#2563EB] text-white shadow-lg shadow-[#2563EB]/30"
                       : "text-white/60 hover:text-white"
                   }`}
                 >
@@ -127,12 +127,12 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3 mb-3">
             {/* From */}
             <div ref={fromRef} className="relative xl:col-span-1">
-              <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                 From
               </label>
-              <div className={`relative flex items-center rounded-xl border transition-all duration-300 ${errors.from ? "border-red-500/60" : "border-[#0EA5E9]/20 focus-within:border-[#22D3EE]/60"}`}
+              <div className={`relative flex items-center rounded-xl border transition-all duration-300 ${errors.from ? "border-red-500/60" : "border-[#2563EB]/20 focus-within:border-[#00D9FF]/60"}`}
                 style={{ background: "rgba(14,165,233,0.05)" }}>
-                <MapPin className="absolute left-3 w-4 h-4 text-[#0EA5E9]/60" />
+                <MapPin className="absolute left-3 w-4 h-4 text-[#2563EB]/60" />
                 <input
                   type="text"
                   value={fromQuery}
@@ -141,7 +141,7 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                   className="w-full pl-9 pr-3 py-3.5 bg-transparent text-white placeholder-white/30 text-sm focus:outline-none"
                 />
                 {from && (
-                  <span className="absolute right-3 text-xs text-[#22D3EE] font-bold">{from.code}</span>
+                  <span className="absolute right-3 text-xs text-[#00D9FF] font-bold">{from.code}</span>
                 )}
               </div>
               {errors.from && <p className="text-red-400 text-xs mt-1">{errors.from}</p>}
@@ -152,15 +152,15 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#0EA5E9]/20 overflow-hidden shadow-2xl shadow-black/50"
+                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#2563EB]/20 overflow-hidden shadow-2xl shadow-black/50"
                   >
                     {fromSuggestions.map((apt) => (
                       <button
                         key={apt.code}
                         onClick={() => { setFrom(apt); setFromQuery(`${apt.city} (${apt.code})`); setFromSuggestions([]); }}
-                        className="w-full px-4 py-3 text-left hover:bg-[#0EA5E9]/10 transition-colors flex items-start gap-3 border-b border-white/5 last:border-0"
+                        className="w-full px-4 py-3 text-left hover:bg-[#2563EB]/10 transition-colors flex items-start gap-3 border-b border-white/5 last:border-0"
                       >
-                        <span className="text-[#0EA5E9] font-bold text-sm mt-0.5 w-10 shrink-0">{apt.code}</span>
+                        <span className="text-[#2563EB] font-bold text-sm mt-0.5 w-10 shrink-0">{apt.code}</span>
                         <div>
                           <div className="text-white text-sm font-medium">{apt.city}</div>
                           <div className="text-white/40 text-xs truncate">{apt.name}</div>
@@ -176,7 +176,7 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
             <div className="hidden xl:flex items-end justify-center pb-1">
               <button
                 onClick={swapAirports}
-                className="w-10 h-10 rounded-full glass border border-[#0EA5E9]/30 flex items-center justify-center text-[#0EA5E9] hover:bg-[#0EA5E9]/20 hover:scale-110 transition-all duration-200"
+                className="w-10 h-10 rounded-full glass border border-[#2563EB]/30 flex items-center justify-center text-[#2563EB] hover:bg-[#2563EB]/20 hover:scale-110 transition-all duration-200"
               >
                 <ArrowLeftRight className="w-4 h-4" />
               </button>
@@ -184,12 +184,12 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
 
             {/* To */}
             <div ref={toRef} className="relative xl:col-span-1">
-              <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                 To
               </label>
-              <div className={`relative flex items-center rounded-xl border transition-all duration-300 ${errors.to ? "border-red-500/60" : "border-[#0EA5E9]/20 focus-within:border-[#22D3EE]/60"}`}
+              <div className={`relative flex items-center rounded-xl border transition-all duration-300 ${errors.to ? "border-red-500/60" : "border-[#2563EB]/20 focus-within:border-[#00D9FF]/60"}`}
                 style={{ background: "rgba(14,165,233,0.05)" }}>
-                <Plane className="absolute left-3 w-4 h-4 text-[#0EA5E9]/60 rotate-45" />
+                <Plane className="absolute left-3 w-4 h-4 text-[#2563EB]/60 rotate-45" />
                 <input
                   type="text"
                   value={toQuery}
@@ -198,7 +198,7 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                   className="w-full pl-9 pr-3 py-3.5 bg-transparent text-white placeholder-white/30 text-sm focus:outline-none"
                 />
                 {to && (
-                  <span className="absolute right-3 text-xs text-[#22D3EE] font-bold">{to.code}</span>
+                  <span className="absolute right-3 text-xs text-[#00D9FF] font-bold">{to.code}</span>
                 )}
               </div>
               {errors.to && <p className="text-red-400 text-xs mt-1">{errors.to}</p>}
@@ -209,15 +209,15 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#0EA5E9]/20 overflow-hidden shadow-2xl shadow-black/50"
+                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#2563EB]/20 overflow-hidden shadow-2xl shadow-black/50"
                   >
                     {toSuggestions.map((apt) => (
                       <button
                         key={apt.code}
                         onClick={() => { setTo(apt); setToQuery(`${apt.city} (${apt.code})`); setToSuggestions([]); }}
-                        className="w-full px-4 py-3 text-left hover:bg-[#0EA5E9]/10 transition-colors flex items-start gap-3 border-b border-white/5 last:border-0"
+                        className="w-full px-4 py-3 text-left hover:bg-[#2563EB]/10 transition-colors flex items-start gap-3 border-b border-white/5 last:border-0"
                       >
-                        <span className="text-[#0EA5E9] font-bold text-sm mt-0.5 w-10 shrink-0">{apt.code}</span>
+                        <span className="text-[#2563EB] font-bold text-sm mt-0.5 w-10 shrink-0">{apt.code}</span>
                         <div>
                           <div className="text-white text-sm font-medium">{apt.city}</div>
                           <div className="text-white/40 text-xs truncate">{apt.name}</div>
@@ -232,12 +232,12 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
             {/* Dates */}
             <div className="grid grid-cols-2 gap-3 xl:col-span-1">
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   Depart
                 </label>
-                <div className={`relative rounded-xl border transition-all duration-300 ${errors.departure ? "border-red-500/60" : "border-[#0EA5E9]/20 focus-within:border-[#22D3EE]/60"}`}
+                <div className={`relative rounded-xl border transition-all duration-300 ${errors.departure ? "border-red-500/60" : "border-[#2563EB]/20 focus-within:border-[#00D9FF]/60"}`}
                   style={{ background: "rgba(14,165,233,0.05)" }}>
-                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0EA5E9]/60" />
+                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#2563EB]/60" />
                   <input
                     type="date"
                     value={departure}
@@ -251,13 +251,13 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   Return
                 </label>
                 <div className={`relative rounded-xl border transition-all duration-300 ${
-                  tripType === "oneway" ? "opacity-40 pointer-events-none" : errors.returnDate ? "border-red-500/60" : "border-[#0EA5E9]/20 focus-within:border-[#22D3EE]/60"
+                  tripType === "oneway" ? "opacity-40 pointer-events-none" : errors.returnDate ? "border-red-500/60" : "border-[#2563EB]/20 focus-within:border-[#00D9FF]/60"
                 }`} style={{ background: "rgba(14,165,233,0.05)" }}>
-                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0EA5E9]/60" />
+                  <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#2563EB]/60" />
                   <input
                     type="date"
                     value={returnDate}
@@ -277,15 +277,15 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
           <div className="flex flex-col sm:flex-row gap-3 items-end">
             {/* Passengers */}
             <div ref={passRef} className="relative w-full sm:w-44">
-              <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                 Passengers
               </label>
               <button
                 onClick={() => setShowPassengers(!showPassengers)}
-                className="w-full flex items-center gap-2 px-3 py-3.5 rounded-xl border border-[#0EA5E9]/20 text-white text-sm transition-all duration-200 hover:border-[#22D3EE]/40"
+                className="w-full flex items-center gap-2 px-3 py-3.5 rounded-xl border border-[#2563EB]/20 text-white text-sm transition-all duration-200 hover:border-[#00D9FF]/40"
                 style={{ background: "rgba(14,165,233,0.05)" }}
               >
-                <Users className="w-4 h-4 text-[#0EA5E9]/60" />
+                <Users className="w-4 h-4 text-[#2563EB]/60" />
                 <span>{passengers} Passenger{passengers > 1 ? "s" : ""}</span>
                 <ChevronDown className={`w-4 h-4 ml-auto text-white/40 transition-transform ${showPassengers ? "rotate-180" : ""}`} />
               </button>
@@ -296,20 +296,20 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#0EA5E9]/20 p-4 shadow-2xl"
+                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#2563EB]/20 p-4 shadow-2xl"
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-white text-sm">Adults</span>
                       <div className="flex items-center gap-3">
                         <button onClick={() => setPassengers(Math.max(1, passengers - 1))}
-                          className="w-8 h-8 rounded-full border border-[#0EA5E9]/40 text-[#0EA5E9] hover:bg-[#0EA5E9]/20 transition-colors flex items-center justify-center text-lg font-bold">-</button>
+                          className="w-8 h-8 rounded-full border border-[#2563EB]/40 text-[#2563EB] hover:bg-[#2563EB]/20 transition-colors flex items-center justify-center text-lg font-bold">-</button>
                         <span className="text-white font-bold w-6 text-center">{passengers}</span>
                         <button onClick={() => setPassengers(Math.min(9, passengers + 1))}
-                          className="w-8 h-8 rounded-full border border-[#0EA5E9]/40 text-[#0EA5E9] hover:bg-[#0EA5E9]/20 transition-colors flex items-center justify-center text-lg font-bold">+</button>
+                          className="w-8 h-8 rounded-full border border-[#2563EB]/40 text-[#2563EB] hover:bg-[#2563EB]/20 transition-colors flex items-center justify-center text-lg font-bold">+</button>
                       </div>
                     </div>
                     <button onClick={() => setShowPassengers(false)}
-                      className="mt-3 w-full py-2 rounded-lg bg-[#0EA5E9]/20 text-[#22D3EE] text-sm font-medium hover:bg-[#0EA5E9]/30 transition-colors">
+                      className="mt-3 w-full py-2 rounded-lg bg-[#2563EB]/20 text-[#00D9FF] text-sm font-medium hover:bg-[#2563EB]/30 transition-colors">
                       Done
                     </button>
                   </motion.div>
@@ -319,12 +319,12 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
 
             {/* Cabin */}
             <div ref={cabinRef} className="relative w-full sm:w-48">
-              <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                 Cabin Class
               </label>
               <button
                 onClick={() => setShowCabin(!showCabin)}
-                className="w-full flex items-center gap-2 px-3 py-3.5 rounded-xl border border-[#0EA5E9]/20 text-white text-sm transition-all duration-200 hover:border-[#22D3EE]/40"
+                className="w-full flex items-center gap-2 px-3 py-3.5 rounded-xl border border-[#2563EB]/20 text-white text-sm transition-all duration-200 hover:border-[#00D9FF]/40"
                 style={{ background: "rgba(14,165,233,0.05)" }}
               >
                 <span>✈</span>
@@ -338,14 +338,14 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#0EA5E9]/20 overflow-hidden shadow-2xl"
+                    className="absolute top-full left-0 right-0 mt-2 z-50 glass-dark rounded-xl border border-[#2563EB]/20 overflow-hidden shadow-2xl"
                   >
                     {cabins.map((c) => (
                       <button
                         key={c}
                         onClick={() => { setCabin(c); setShowCabin(false); }}
                         className={`w-full px-4 py-3 text-left text-sm transition-colors border-b border-white/5 last:border-0 ${
-                          cabin === c ? "bg-[#0EA5E9]/20 text-[#22D3EE] font-semibold" : "text-white hover:bg-[#0EA5E9]/10"
+                          cabin === c ? "bg-[#2563EB]/20 text-[#00D9FF] font-semibold" : "text-white hover:bg-[#2563EB]/10"
                         }`}
                       >
                         {c}

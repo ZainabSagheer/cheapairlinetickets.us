@@ -11,7 +11,7 @@ function ParticleItem({ p, scrollY }: { p: Particle; scrollY: MotionValue<number
   const y = useTransform(scrollY, [0, 600], [0, -(p.size * 12)]);
   return (
     <motion.div
-      className="absolute rounded-full bg-[#0EA5E9]"
+      className="absolute rounded-full bg-[#2563EB]"
       style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size, opacity: 0.3, y }}
       animate={{ y: [0, -30, 0], opacity: [0.2, 0.6, 0.2] }}
       transition={{ duration: p.duration, delay: p.delay, repeat: Infinity, ease: "easeInOut" }}
@@ -26,8 +26,8 @@ const FLIGHT_ROUTES = [
 ];
 
 const LIVE_STATS = [
-  { label: "Flights Tracked", value: "12,847", icon: Plane, color: "#0EA5E9" },
-  { label: "Active Routes", value: "4,230+", icon: Globe, color: "#22D3EE" },
+  { label: "Flights Tracked", value: "12,847", icon: Plane, color: "#2563EB" },
+  { label: "Active Routes", value: "4,230+", icon: Globe, color: "#00D9FF" },
   { label: "Avg. Savings", value: "Up to 60%", icon: TrendingDown, color: "#34D399" },
 ];
 
@@ -164,7 +164,7 @@ export default function HeroSection() {
 
         ctx.beginPath();
         ctx.arc(bx, by, 4, 0, Math.PI * 2);
-        ctx.fillStyle = "#22D3EE";
+        ctx.fillStyle = "#00D9FF";
         ctx.fill();
         ctx.beginPath();
         ctx.arc(bx, by, 8, 0, Math.PI * 2);
@@ -199,7 +199,7 @@ export default function HeroSection() {
       />
 
       {/* Radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#0EA5E9]/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[#2563EB]/5 blur-[120px] pointer-events-none" />
 
       {/* Floating particles — generated client-side only to avoid hydration mismatch */}
       {particles.map((p) => (
@@ -214,10 +214,10 @@ export default function HeroSection() {
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       >
         <div className="relative">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#0EA5E9]/20 to-[#22D3EE]/10 flex items-center justify-center glow-blue">
-            <Plane className="w-16 h-16 text-[#22D3EE] rotate-45" />
+          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#2563EB]/20 to-[#7C3AED]/10 flex items-center justify-center glow-blue">
+            <Plane className="w-16 h-16 text-[#00D9FF] rotate-45" />
           </div>
-          <div className="absolute inset-0 rounded-full bg-[#0EA5E9]/10 blur-xl animate-pulse-glow" />
+          <div className="absolute inset-0 rounded-full bg-[#2563EB]/10 blur-xl animate-pulse-glow" />
         </div>
       </motion.div>
 
@@ -228,8 +228,8 @@ export default function HeroSection() {
         animate={{ y: [0, 15, 0], rotate: [0, -5, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="w-20 h-20 rounded-full border border-[#0EA5E9]/30 flex items-center justify-center glass">
-          <Globe className="w-10 h-10 text-[#0EA5E9]/70" />
+        <div className="w-20 h-20 rounded-full border border-[#2563EB]/30 flex items-center justify-center glass">
+          <Globe className="w-10 h-10 text-[#2563EB]/70" />
         </div>
       </motion.div>
 
@@ -244,10 +244,10 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <GlassEffect variant="dark" blurStrength={16} className="rounded-full px-4 py-2 inline-flex">
-            <span className="flex items-center gap-2 text-[#22D3EE] text-sm font-medium">
+            <span className="flex items-center gap-2 text-[#00D9FF] text-sm font-medium">
               <Zap className="w-4 h-4" />
               AI-Powered Travel Platform
-              <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-[#00D9FF] animate-pulse" />
             </span>
           </GlassEffect>
         </motion.div>
@@ -275,7 +275,7 @@ export default function HeroSection() {
           className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Compare routes, explore destinations, and request your booking with our
-          <span className="text-[#22D3EE]"> expert travel consultants</span>. Save up to 60% on airfares.
+          <span className="text-[#00D9FF]"> expert travel consultants</span>. Save up to 60% on airfares.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -294,7 +294,7 @@ export default function HeroSection() {
           </GlassButton>
 
           <GlassEffect
-            href="https://wa.me/1234567890?text=Hello%20CheapAirlineTickets.us%2C%20I%20would%20like%20a%20flight%20quote."
+            href="https://wa.me/1234567890?text=Hello%20FlightBooking.bitsolmarketing.com%2C%20I%20would%20like%20a%20flight%20quote."
             variant="dark"
             blurStrength={14}
             className="rounded-2xl px-8 py-4 hover:scale-[1.03] active:scale-[0.97]"
@@ -343,7 +343,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-center gap-2 text-white/30">
             <span className="text-xs uppercase tracking-widest">Scroll</span>
             <div className="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center p-1">
-              <div className="w-1 h-2 rounded-full bg-[#0EA5E9] animate-bounce" />
+              <div className="w-1 h-2 rounded-full bg-[#2563EB] animate-bounce" />
             </div>
           </div>
         </motion.div>

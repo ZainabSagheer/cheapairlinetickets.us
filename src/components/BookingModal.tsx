@@ -46,7 +46,7 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
   };
 
   const whatsappMsg = encodeURIComponent(
-    `Hello CheapAirlineTickets.us,\n\nI would like a quote for the following flight:\n\nFrom: ${flight.fromCity} (${flight.from})\nTo: ${flight.toCity} (${flight.to})\nFlight: ${flight.airline} ${flight.flightNumber}\nTravel Date: ${departure}\nPassengers: ${form.travelers}\nCabin: ${flight.cabin}\nEstimated Fare: $${flight.price.toLocaleString()}\n\n${form.notes ? `Notes: ${form.notes}\n\n` : ""}Please assist.\n\nName: ${form.name}\nPhone: ${form.phone || form.whatsapp}`
+    `Hello FlightBooking.bitsolmarketing.com,\n\nI would like a quote for the following flight:\n\nFrom: ${flight.fromCity} (${flight.from})\nTo: ${flight.toCity} (${flight.to})\nFlight: ${flight.airline} ${flight.flightNumber}\nTravel Date: ${departure}\nPassengers: ${form.travelers}\nCabin: ${flight.cabin}\nEstimated Fare: $${flight.price.toLocaleString()}\n\n${form.notes ? `Notes: ${form.notes}\n\n` : ""}Please assist.\n\nName: ${form.name}\nPhone: ${form.phone || form.whatsapp}`
   );
 
   return (
@@ -71,10 +71,10 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
       >
       <GlassModal className="max-h-[90vh]">
         {/* Glow top edge */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0EA5E9] to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#2563EB] to-transparent" />
 
         {/* Header */}
-        <div className="p-6 border-b border-[#0EA5E9]/10">
+        <div className="p-6 border-b border-[#2563EB]/10">
           <div className="flex items-start justify-between">
             <div>
               <h2 className="text-xl font-bold text-white mb-1">Request Booking</h2>
@@ -87,22 +87,22 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
         </div>
 
         {/* Flight summary card */}
-        <div className="mx-6 mt-4 p-4 rounded-xl bg-[#0EA5E9]/8 border border-[#0EA5E9]/20">
+        <div className="mx-6 mt-4 p-4 rounded-xl bg-[#2563EB]/8 border border-[#2563EB]/20">
           <div className="flex items-center gap-4">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-white font-bold text-lg">{flight.departure}</span>
-                <div className="flex items-center gap-1 text-[#22D3EE] flex-1">
-                  <div className="h-px flex-1 bg-gradient-to-r from-[#22D3EE]/40 to-[#22D3EE]/40" />
+                <div className="flex items-center gap-1 text-[#00D9FF] flex-1">
+                  <div className="h-px flex-1 bg-gradient-to-r from-[#00D9FF]/40 to-[#00D9FF]/40" />
                   <Plane className="w-4 h-4 rotate-45" />
-                  <div className="h-px flex-1 bg-gradient-to-r from-[#22D3EE]/40 to-transparent" />
+                  <div className="h-px flex-1 bg-gradient-to-r from-[#00D9FF]/40 to-transparent" />
                 </div>
                 <span className="text-white font-bold text-lg">{flight.arrival}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/50">
-                <span className="text-[#0EA5E9] font-bold">{flight.from}</span>
+                <span className="text-[#2563EB] font-bold">{flight.from}</span>
                 <span>→</span>
-                <span className="text-[#0EA5E9] font-bold">{flight.to}</span>
+                <span className="text-[#2563EB] font-bold">{flight.to}</span>
                 <span>•</span>
                 <span>{flight.airline}</span>
                 <span>•</span>
@@ -155,11 +155,11 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Full Name */}
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   Full Name *
                 </label>
                 <div className="relative">
-                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0EA5E9]/50" />
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#2563EB]/50" />
                   <input
                     type="text"
                     value={form.name}
@@ -173,11 +173,11 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
 
               {/* Email */}
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   Email Address *
                 </label>
                 <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0EA5E9]/50" />
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#2563EB]/50" />
                   <input
                     type="email"
                     value={form.email}
@@ -191,11 +191,11 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
 
               {/* Phone */}
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   Phone Number *
                 </label>
                 <div className="relative">
-                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0EA5E9]/50" />
+                  <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#2563EB]/50" />
                   <input
                     type="tel"
                     value={form.phone}
@@ -209,7 +209,7 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
 
               {/* WhatsApp */}
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   WhatsApp Number
                 </label>
                 <div className="relative">
@@ -228,7 +228,7 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
 
               {/* Number of Travelers */}
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   Number of Travelers
                 </label>
                 <select
@@ -238,14 +238,14 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
                   style={{ background: "rgba(14,165,233,0.05)" }}
                 >
                   {[1,2,3,4,5,6,7,8,9].map(n => (
-                    <option key={n} value={n} style={{ background: "#0a2340" }}>{n} Traveler{n > 1 ? "s" : ""}</option>
+                    <option key={n} value={n} style={{ background: "#0F172A" }}>{n} Traveler{n > 1 ? "s" : ""}</option>
                   ))}
                 </select>
               </div>
 
               {/* Preferred Flight */}
               <div>
-                <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                   Preferred Flight
                 </label>
                 <input
@@ -259,11 +259,11 @@ export default function BookingModal({ flight, passengers, departure, onClose }:
 
             {/* Travel notes */}
             <div>
-              <label className="block text-xs font-semibold text-[#22D3EE] uppercase tracking-wider mb-1.5">
+              <label className="block text-xs font-semibold text-[#00D9FF] uppercase tracking-wider mb-1.5">
                 Travel Notes (Optional)
               </label>
               <div className="relative">
-                <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-[#0EA5E9]/50" />
+                <MessageSquare className="absolute left-3 top-3 w-4 h-4 text-[#2563EB]/50" />
                 <textarea
                   value={form.notes}
                   onChange={(e) => setForm({ ...form, notes: e.target.value })}

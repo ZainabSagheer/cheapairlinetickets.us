@@ -18,7 +18,7 @@ export default function PopularDestinations({ destinations = FALLBACK_DESTINATIO
         {/* Section header */}
         <ScrollReveal direction="up" className="text-center mb-14">
           <GlassEffect variant="dark" blurStrength={16} className="rounded-full px-4 py-2 inline-flex mb-4">
-            <span className="flex items-center gap-2 text-[#22D3EE] text-sm font-medium">
+            <span className="flex items-center gap-2 text-[#00D9FF] text-sm font-medium">
               <MapPin className="w-4 h-4" />
               Popular Destinations
             </span>

@@ -14,7 +14,7 @@ const features = [
     icon: Users,
     title: "Expert Travel Consultants",
     desc: "Dedicated travel professionals with 10+ years of experience ready to craft your perfect journey.",
-    color: "#0EA5E9",
+    color: "#2563EB",
     stat: "500+",
     statLabel: "Expert Consultants",
   },
@@ -22,7 +22,7 @@ const features = [
     icon: Headphones,
     title: "Personalized Booking Assistance",
     desc: "One-on-one support from inquiry to boarding. We handle every detail so you can focus on your trip.",
-    color: "#22D3EE",
+    color: "#00D9FF",
     stat: "24/7",
     statLabel: "Support Available",
   },
@@ -96,17 +96,17 @@ export default function WhyChooseUs() {
     <section id="about" className="py-20 relative overflow-hidden">
       {/* Parallax decorative blobs */}
       <ParallaxLayer strength={50} className="absolute top-0 left-1/4 pointer-events-none">
-        <div className="w-96 h-96 rounded-full bg-[#0EA5E9]/5 blur-[100px]" />
+        <div className="w-96 h-96 rounded-full bg-[#2563EB]/5 blur-[100px]" />
       </ParallaxLayer>
       <ParallaxLayer strength={-40} className="absolute bottom-0 right-1/4 pointer-events-none">
-        <div className="w-80 h-80 rounded-full bg-[#22D3EE]/5 blur-[80px]" />
+        <div className="w-80 h-80 rounded-full bg-[#00D9FF]/5 blur-[80px]" />
       </ParallaxLayer>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <ScrollReveal direction="up" className="text-center mb-16">
           <GlassEffect variant="dark" blurStrength={16} className="rounded-full px-4 py-2 inline-flex mb-4">
-            <span className="flex items-center gap-2 text-[#22D3EE] text-sm font-medium">
+            <span className="flex items-center gap-2 text-[#00D9FF] text-sm font-medium">
               <Award className="w-4 h-4" />
               Why Choose Us
             </span>
@@ -148,7 +148,7 @@ export default function WhyChooseUs() {
               </div>
 
               {/* Content */}
-              <h3 className="text-white text-lg font-bold mb-2 group-hover:text-[#22D3EE] transition-colors">
+              <h3 className="text-white text-lg font-bold mb-2 group-hover:text-[#00D9FF] transition-colors">
                 {feat.title}
               </h3>
               <p className="text-white/50 text-sm leading-relaxed mb-4">
@@ -170,7 +170,7 @@ export default function WhyChooseUs() {
           {[
             { icon: Shield, label: "Secure Booking", color: "#34D399" },
             { icon: Star, label: "5-Star Rated", color: "#FBBF24" },
-            { icon: Clock, label: "Instant Quotes", color: "#0EA5E9" },
+            { icon: Clock, label: "Instant Quotes", color: "#2563EB" },
             { icon: Plane, label: "500+ Airlines", color: "#A78BFA" },
           ].map((badge) => (
             <StaggerItem key={badge.label} direction="scale">

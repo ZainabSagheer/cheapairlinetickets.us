@@ -1,34 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import VideoBackground from "@/components/VideoBackground";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import { GlassFilter } from "@/components/LiquidGlass";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "CheapAirlineTickets.us — Find Cheap Flights Worldwide | Discount Airfare",
+  title: "FlightBooking.bitsolmarketing.com — Find Cheap Flights Worldwide | Discount Airfare",
   description: "Find cheap airline tickets, discount flights, and affordable airfare worldwide. Compare 500+ airlines, search domestic and international flights. Book with our travel experts via WhatsApp for the best deals on USA flight tickets.",
   keywords: "cheap airline tickets, cheap flights, discount flights, international flights, domestic flights, USA flight tickets, affordable airfare, cheap airfare, flight deals, low cost flights",
   openGraph: {
-    title: "CheapAirlineTickets.us — Find Cheap Flights Worldwide",
+    title: "FlightBooking.bitsolmarketing.com — Find Cheap Flights Worldwide",
     description: "Search hundreds of airlines and find the cheapest flights worldwide. Compare routes, explore destinations, and connect with our travel experts for personalized booking assistance.",
     type: "website",
-    url: "https://cheapairlinetickets.us",
-    siteName: "CheapAirlineTickets.us",
+    url: "https://flightbooking.bitsolmarketing.com",
+    siteName: "FlightBooking.bitsolmarketing.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CheapAirlineTickets.us — Cheap Flights & Discount Airfare",
+    title: "FlightBooking.bitsolmarketing.com — Cheap Flights & Discount Airfare",
     description: "Find cheap airline tickets and discount flights worldwide. Search, compare, and book with our travel experts.",
   },
   robots: {
@@ -43,7 +41,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://cheapairlinetickets.us",
+    canonical: "https://flightbooking.bitsolmarketing.com",
   },
 };
 
@@ -55,11 +53,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${montserrat.variable} h-full antialiased`}
     >
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0EA5E9" />
+        <meta name="theme-color" content="#2563EB" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
@@ -67,11 +65,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "TravelAgency",
-              "name": "CheapAirlineTickets.us",
-              "url": "https://cheapairlinetickets.us",
+              "name": "FlightBooking.bitsolmarketing.com",
+              "url": "https://flightbooking.bitsolmarketing.com",
               "description": "Find cheap airline tickets and discount flights worldwide",
               "telephone": "+1-800-555-1234",
-              "email": "support@cheapairlinetickets.us",
+              "email": "support@flightbooking.bitsolmarketing.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "New York",
@@ -86,12 +84,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col relative">
-        <GlassFilter />
-        <VideoBackground />
-        <ScrollProgressBar />
-        <div className="relative z-10 flex flex-col min-h-full">
-          {children}
-        </div>
+        <ThemeProvider>
+          <GlassFilter />
+          <VideoBackground />
+          <ScrollProgressBar />
+          <div className="relative z-10 flex flex-col min-h-full">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
